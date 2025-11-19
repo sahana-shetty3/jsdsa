@@ -1,15 +1,16 @@
-let n = 5;
-let count=0;
+function findElement(arr,x){
+    for(let i=0;i<arr.length;i++){
+     if (arr[i]==x){
+        return i;
 
-for (let i = 0; i < n; i++) {
-    let row = " ";
-        
-        for (let j = 0; j > i+1 ; j++) 
-        {
-         row = row + (j+1) ;
-         }
-       
-        console.log(row);
-    }
+     }
     
+    }
+    return-1;
+}
+
+let arr=[10,30,40,34,-89];
+
+let res=findElement(arr,401);
+console.log(res);
 
