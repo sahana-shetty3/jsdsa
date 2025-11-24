@@ -1,11 +1,9 @@
 function removeEle(num,val){
     let x=0;
-    for(let i=0;i<num.length;i++){
-        if(num[i]!= val)
-            {
+    for(let i=0;i<length.num;i++){
+        if(num[i]>num[x]){
             num[i]=num[x];
             x++;
-
         }
     }
     return x;
