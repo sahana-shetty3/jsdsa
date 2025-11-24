@@ -18,6 +18,7 @@ function mergeSort(nums1,nums2,m,n){
             p2--;
         }
     }
+    return nums1;
 }
 
 let res = mergeSort(nums1,nums2,3,3)

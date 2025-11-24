@@ -1,6 +1,6 @@
 function duplicatesRemove(num){
     let x=0;
-    for(let i=0;i< num.length;i++){
+    for(let i=0;i <num.length ;i++){
         if(num[i]>num[x]){
             x=x+1;
             num[x]=num[i];
