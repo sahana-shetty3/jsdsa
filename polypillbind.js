@@ -21,3 +21,7 @@ params=args.slice(1);
 
 let printMyname2=printName.mybind(name,"udupi");
 printMyname2("karanataka","india");
+
+let printMyname3=printName.mybind(name,"begaluru");
+
+printMyname3

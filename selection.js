@@ -1,4 +1,5 @@
-let a = [9, 6, 1, 3, 2, 5]
+let a = [9, 6, 1, 3, 2, 5,6,7,8];
+let arr=[7,8,9,0,6,5];
 
 function selectionSort(a) {
   let n = a.length;
