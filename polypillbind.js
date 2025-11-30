@@ -24,4 +24,3 @@ printMyname2("karanataka","india");
 
 let printMyname3=printName.mybind(name,"begaluru");
 
-printMyname3
