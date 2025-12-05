@@ -19,7 +19,7 @@ const numbers=[43,44,56,43,45,34];
 // console.log(val);
 
 // //insert or replace
-//val=numbers[2]=100;
+val=numbers[2]=100;
 
 // //find the index value
  //val=numbers.indexOf(45);
