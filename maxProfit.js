@@ -1,3 +1,8 @@
+
+
+let res = maxProfit(prices);
+
+console.log(res);
 function maxProfit(prices){
     let min= 0 ;
     let maxProfit = 0;
@@ -14,7 +19,3 @@ function maxProfit(prices){
 }
 
 let prices=[6,1,3,5,6,7];
-
-let res = maxProfit(prices);
-
-console.log(res);
