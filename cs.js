@@ -1,19 +1,35 @@
-let res = maxProfit(prices);
-
-console.log(res);
-function maxProfit(prices){
-    let min= 0 ;
-    let maxProfit = 0;
-    for (let i =0;i < prices.length;i++)
-        {
-        if (prices[i]-min>maxProfit){
-            maxProfit = prices[i] - min;
-        }
-        if (prices[i] < min) {
-            min = prices[i];
+function removeEle(num,val){
+    let x=0;
+    for(let i=0;i<length.num;i++){
+        if(num[i]>num[x]){
+            num[i]=num[x];
+            x++;
         }
     }
-    return maxProfit;
+    return x;
 }
 
-let prices=[6,1,3,5,6,7];
+let num = [1,2,2,2,3,3,4,4,4,56,65,76,67,3];
+let res=removeEle(num,3)
+
+console.log(res);
+
+
+function con(n) {
+    
+    if (n == 0) {
+        return 1;
+    }
+    n = Math.abs(n);
+    let count = 0;
+ 
+    while (n > 0) {
+        n = Math.floor((n/10));
+        count++;
+    }
+    return count;
+
+}
+let num = 67977;
+let res = con(num);
+console.log(res);
