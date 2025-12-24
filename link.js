@@ -1,30 +1,10 @@
-/**
- * @param {number} n
- * @return {number}
- */
-var fib = function(n) {
-    if(n<=1){
-        return n;}
-    return fib(n-1)+fib(n-2);
-    
-};
+var strStr = function(haystack, needle) {
+    if (needle === "") return 0;
 
-MyLinkedList.prototype.deleteAtIndex = function(index) {
-    if( index < 0 || index >= this.size) return;
-     
-    if(index === 0){
-        this.head = this.head.next;
-    }
-    else{
-        let curr = this.head;
-
-        for( let i=0;i< index-1;i++){
-        curr = curr.next;
+    for (let i = 0; i <= haystack.length - needle.length; i++) {
+        if (haystack.substring(i, i + needle.length) === needle) {
+            return i;
         }
-        curr.next = curr.next.next; 
     }
-
-    this.size--;
-    
-    
+    return -1;
 };
