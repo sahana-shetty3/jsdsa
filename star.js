@@ -1,27 +1,22 @@
-function findElement(arr){
-    let count=0;
-    let firstLrgest=-Infinity;
-    let secondLargest=-Infinity;
-    if(arr.length<2){
-        return null;
-    }
-    for(let i=0;i<arr.length;i++){
-     if (arr[i]>firstLrgest){
-        secondLargest=firstLrgest;
-        firstLrgest = arr[i];
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var middleNode = function(head) {
+    let slow = head;
+    let fast = head;
 
+    while(fast !== null && fast.next !== null )
+     {
+        slow= slow.next;
+        fast= fast.next.next;
      }
-     else if(arr[i]>secondLargest && arr[i]!= firstLrgest){
-        secondLargest=arr[i];
-     }
-
-    
-    }
-    return secondLargest;
-}
-
-let arr=[-89];
-
-let res=findElement(arr);
-console.log(res);
-
+    return slow;
+};
