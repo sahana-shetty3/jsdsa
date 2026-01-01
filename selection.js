@@ -1,21 +1,22 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var middleNode = function(head) {
+    let slow = head;
+    let fast = head;
 
-
-let res = maxProfit(prices);
-
-console.log(res);
-function maxProfit(prices){
-    let min= 0 ;
-    let maxProfit = 0;
-    for (let i =0;i < prices.length;i++)
-        {
-        if (prices[i]-min>maxProfit){
-            maxProfit = prices[i] - min;
-        }
-        if (prices[i] < min) {
-            min = prices[i];
-        }
-    }
-    return maxProfit;
-}
-
-let prices=[6,1,3,5,6,7];
+    while(fast !== null && fast.next !== null )
+     {
+        slow= slow.next;
+        fast= fast.next.next;
+     }
+    return slow;
+};
