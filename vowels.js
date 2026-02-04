@@ -1,31 +1,20 @@
 /**
  * @param {string} s
- * @return {number}
+ * @param {string} t
+ * @return {boolean}
  */
-var maxFreqSum = function (s) {
-    let map = {}
-    for (i = 0; i < s.length; i++) {
-        if (!map[s[i]]) {
-            map[s[i]] = 1
-        } else {
-            ++map[s[i]]
-        }
-    }
+var isIsomorphic = function(s, t) {
+    let mapStoT = {};
+    let mapTtoS = {};
 
-    let vowels = ['a', 'e', 'i', 'o', 'u']
-    let maxVowels = 0
-    let maxConsonant = 0
-    for (let i = 0; i < s.length; i++) {
-        if (vowels.includes(s[i])) {
-            if (map[s[i]] > maxVowels) {
-                maxVowels = map[s[i]]
-            }
+    for(let i=0;i < s.length ;i++){
+        if(!mapStoT[s[i]] && !mapTtoS[t[i]]){
+            mapStoT[s[i]] = t[i];
+            mapTtoS[t[i]] = s[i];
         }
-        else {
-            if (map[s[i]] > maxConsonant) {
-                maxConsonant = map[s[i]]
-            }
+        else if(mapTtoS[t[i]] !==s[i] || mapStoT[s[i]] !== t[i]){
+            return false;
         }
     }
-    return maxConsonant + maxVowels
+    return true;
 };
