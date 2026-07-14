@@ -1,4 +1,7 @@
 
+
+    
+    
 var removeDuplicates = function(nums) {
     let x=0;
 
@@ -8,8 +11,4 @@ var removeDuplicates = function(nums) {
             nums[x]=nums[i];
         }
     }
-    return x+1;
-    
-    
-
-}
+    return x+1;}
