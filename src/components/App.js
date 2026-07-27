@@ -1,5 +1,5 @@
 import Header from "./Header.jsx"
-import Body from "./Body.jsx";
+import Body from "../../Body.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./Contact.jsx";
 import Error from "./Error.jsx";
@@ -9,7 +9,7 @@ import {Provider} from "react-redux";
 import appStore from "../utils/appStore.jsx";
 
 const Grocery = lazy(() => import("./Grocery"));
-const About = lazy(() => import("./About"));
+const About = lazy(() => import("./About.js"));
 
 const AppLayout = () => {
   return (
