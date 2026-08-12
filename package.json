@@ -25,5 +25,9 @@
   },
   "devDependencies": {
     "parcel": "^2.16.4"
-  }
+  },
+  "browserslist":
+    ["last 2 versions"]
+
+  
 }
