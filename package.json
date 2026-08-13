@@ -12,8 +12,8 @@
   },
   "license": "ISC",
   "author": "sahana",
-  "type": "commonjs",
-  "main": "oranges.js",
+ 
+  
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
