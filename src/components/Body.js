@@ -18,14 +18,20 @@ const Body =()=>{
         console.log(json);
         setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
-    if(listOfRestaurant.length===0){
-        return <Shimmer/>
-    }
-
    
-    return(
+   
+    return   (listOfRestaurant.length===0)?(
+         <Shimmer/>
+
+        ):(
         <div className="body">
             <div className="filter">
+                <div className="search">
+                    <input type="text" className="search-box"></input>
+                    <button onClick={()=>{
+                        
+                    }}>Search</button>
+                </div>
                 <button className="filter-btn" 
                 onClick={()=>{
                     const filteredList = listOfRestaurant.filter((res)=>res.info.avgRating>4.2

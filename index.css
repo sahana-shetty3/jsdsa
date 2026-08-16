@@ -47,8 +47,7 @@
 
 }
 .filter-btn{
-    padding: 10px;
-    margin: 10px;
+  margin:5px;
     cursor: pointer;
 }
 
@@ -70,4 +69,15 @@
     
     background-color: rgb(243, 244, 246);
 
+}
+.login{
+    padding: 20px;
+    cursor: pointer;
+}
+.filter{
+    display: flex;
+    padding: 10px;
+}
+.search{
+    margin:5px;
 }
