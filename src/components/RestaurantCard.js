@@ -6,7 +6,9 @@ const RestaurantCard =({resData})=>{
         cloudinaryImageId,
         cuisines,
         avgRating,
-        deliveryTime}
+        costForTwo,
+        sla,
+    }
         =resData?.info;
     
     return(
@@ -19,7 +21,8 @@ const RestaurantCard =({resData})=>{
             <h3>{name}</h3>
             <h5>{cuisines.join(",")}</h5>
             <h5>{avgRating}</h5>
-            <h5>{deliveryTime}minutes</h5>
+            <h5>{sla.slaString}</h5>
+            <h5>{costForTwo}</h5>
             
         </div>
     )
