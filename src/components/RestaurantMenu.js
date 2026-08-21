@@ -11,7 +11,7 @@ const RestaurantMenu = () => {
   const fetchMenu = async () => {
     try {
       const data = await fetch(
-        "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0035068&lng=77.5890953&restaurantId=333800&submitAction=ENTER"
+        "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0035068&lng=77.5890953&restaurantId=333800r&submitAction=ENTER"
       );
       const json = await data.json();
       console.log(json);
